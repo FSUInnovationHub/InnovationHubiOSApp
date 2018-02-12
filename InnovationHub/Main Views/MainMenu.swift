@@ -11,7 +11,7 @@ import UIKit
 class MainMenu: UIViewController {
 
     @IBOutlet var mainMenuTableView: UITableView!
-    var menuOptions = ["Book a Room", "Ask for Supervisor","Reserve Equipment","Learn More"]
+    var menuOptions = ["Book a Room", "Ask for Assistance","Reserve Equipment","Learn More"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ extension MainMenu: UITableViewDelegate, UITableViewDataSource{
         
         if cell.menuOptionText!.text == "Book a Room"{
             cell.backgroundImage!.image = #imageLiteral(resourceName: "feature_hacking")
-        }else if cell.menuOptionText!.text == "Ask for Supervisor"{
+        }else if cell.menuOptionText!.text == "Ask for Assistance"{
             cell.backgroundImage!.image = #imageLiteral(resourceName: "splash8")
         }else if cell.menuOptionText!.text == "Reserve Equipment"{
             cell.backgroundImage!.image = #imageLiteral(resourceName: "feature_makerspace")
@@ -64,8 +64,11 @@ extension MainMenu: UITableViewDelegate, UITableViewDataSource{
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "bookARoom")
             self.present(vc!, animated: true, completion: nil)
             
-        }else if menuOptions[indexPath.row] == "Ask for Supervisor"{
+        }else if menuOptions[indexPath.row] == "Ask for Assistance"{
             //display supervisor request view
+            //display book a room view
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "askForAssitance")
+            self.present(vc!, animated: true, completion: nil)
         }else if menuOptions[indexPath.row] == "Reserve Equipment"{
             //display reserve equipment View
         }else if menuOptions[indexPath.row] == "Learn More"{
