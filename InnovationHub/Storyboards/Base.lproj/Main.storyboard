@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Bold.ttf">
+            <string>Oswald-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main Menu-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="MainMenu" customModule="InnovationHub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ybz-27-0PX">
+                                <rect key="frame" x="0.0" y="132" width="375" height="597"/>
+                                <color key="backgroundColor" red="0.505707562" green="0.50977981090000002" blue="0.51386749740000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.505707562" green="0.50977981090000002" blue="0.51386749740000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainMenuOptions" rowHeight="166" id="krt-9s-6in" customClass="mainMenuOptionCell" customModule="InnovationHub" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="166"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="krt-9s-6in" id="Jq8-Dj-FnB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="166"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feature_hacking" translatesAutoresizingMaskIntoConstraints="NO" id="a64-dz-c5j">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="166"/>
+                                                </imageView>
+                                                <view clearsContextBeforeDrawing="NO" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRy-nr-l0D">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="166"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book a Room" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLV-lZ-DSy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="166"/>
+                                                    <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="35"/>
+                                                    <color key="textColor" red="0.9728240037" green="1" blue="0.98419289340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="0.0" height="1"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="iLV-lZ-DSy" secondAttribute="bottom" id="0B7-qX-vD6"/>
+                                                <constraint firstItem="nRy-nr-l0D" firstAttribute="top" secondItem="Jq8-Dj-FnB" secondAttribute="top" id="5dX-LS-Zpe"/>
+                                                <constraint firstItem="a64-dz-c5j" firstAttribute="top" secondItem="Jq8-Dj-FnB" secondAttribute="top" id="Hc6-gC-BAv"/>
+                                                <constraint firstAttribute="trailing" secondItem="a64-dz-c5j" secondAttribute="trailing" id="LVA-Q6-6ny"/>
+                                                <constraint firstItem="nRy-nr-l0D" firstAttribute="leading" secondItem="Jq8-Dj-FnB" secondAttribute="leading" id="MxN-K2-miD"/>
+                                                <constraint firstItem="a64-dz-c5j" firstAttribute="leading" secondItem="Jq8-Dj-FnB" secondAttribute="leading" id="PfI-8v-sw8"/>
+                                                <constraint firstAttribute="trailing" secondItem="iLV-lZ-DSy" secondAttribute="trailing" id="UYd-Em-fhp"/>
+                                                <constraint firstItem="iLV-lZ-DSy" firstAttribute="top" secondItem="Jq8-Dj-FnB" secondAttribute="top" id="Vib-8x-bxv"/>
+                                                <constraint firstItem="iLV-lZ-DSy" firstAttribute="leading" secondItem="Jq8-Dj-FnB" secondAttribute="leading" id="cSH-G7-5Ab"/>
+                                                <constraint firstAttribute="bottom" secondItem="nRy-nr-l0D" secondAttribute="bottom" id="ptd-vV-Zvu"/>
+                                                <constraint firstAttribute="bottom" secondItem="a64-dz-c5j" secondAttribute="bottom" id="sf7-QW-cVp"/>
+                                                <constraint firstAttribute="trailing" secondItem="nRy-nr-l0D" secondAttribute="trailing" id="vql-Ec-iNi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backgroundImage" destination="a64-dz-c5j" id="YZN-h1-kdv"/>
+                                            <outlet property="imageFilter" destination="nRy-nr-l0D" id="cdU-3R-hfP"/>
+                                            <outlet property="menuOptionText" destination="iLV-lZ-DSy" id="Xvm-0n-blu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAIN MENU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmr-Zb-l8t">
+                                <rect key="frame" x="16" y="58" width="343" height="52.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="45"/>
+                                <color key="textColor" red="0.9728240037" green="1" blue="0.98419289340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51117183430000002" green="0.5129685746" blue="0.51835879549999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pmr-Zb-l8t" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="14" id="0S7-A5-4Hj"/>
+                            <constraint firstItem="pmr-Zb-l8t" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="5nu-EY-1Yr"/>
+                            <constraint firstItem="ybz-27-0PX" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="8K7-3Q-DDI"/>
+                            <constraint firstItem="ybz-27-0PX" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="V9b-Qo-7Yu"/>
+                            <constraint firstAttribute="trailing" secondItem="ybz-27-0PX" secondAttribute="trailing" id="eAK-a3-mKd"/>
+                            <constraint firstItem="pmr-Zb-l8t" firstAttribute="centerX" secondItem="ybz-27-0PX" secondAttribute="centerX" id="ffa-eW-zWh"/>
+                            <constraint firstItem="ybz-27-0PX" firstAttribute="top" secondItem="pmr-Zb-l8t" secondAttribute="bottom" constant="21.333333333333343" id="u1A-7E-a3Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Main Menu" image="window-7" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="mainMenuTableView" destination="ybz-27-0PX" id="m1q-iR-wiL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="-307"/>
+        </scene>
+        <!--BookA Room-->
+        <scene sceneID="fTP-9Y-IKq">
+            <objects>
+                <viewController storyboardIdentifier="bookARoom" id="bOB-5A-cqn" customClass="BookARoom" customModule="InnovationHub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cak-aU-ipR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2H-Xj-Z76">
+                                <rect key="frame" x="0.0" y="164" width="375" height="648"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tik-f7-OhG">
+                                <rect key="frame" x="279" y="44" width="80" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="17"/>
+                                <state key="normal" title="RETURN">
+                                    <color key="titleColor" red="0.9728240037" green="1" blue="0.98419289340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="q3P-A9-mlY" kind="unwind" unwindAction="returnToMainViewWithUnwindSegue:" id="k0L-aM-oyb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BOOK A ROOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wv0-dV-gpU">
+                                <rect key="frame" x="16" y="89" width="343" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="45"/>
+                                <color key="textColor" red="0.9728240037" green="1" blue="0.98419289340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50962871313095093" green="0.51370155811309814" blue="0.51778864860534668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="rmX-pY-8kH"/>
+                    </view>
+                    <connections>
+                        <outlet property="bookingWebView" destination="W2H-Xj-Z76" id="leU-vV-nxf"/>
+                        <outlet property="returnButton" destination="Tik-f7-OhG" id="HjK-tX-Oz3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="85q-YY-7ql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="q3P-A9-mlY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="-717"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="AboutPage" customModule="InnovationHub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.50570756196975708" green="0.50977981090545654" blue="0.51386749744415283" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Information" image="text-list-7" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="763"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="feature_hacking" width="600" height="350"/>
+        <image name="text-list-7" width="30" height="30"/>
+        <image name="window-7" width="30" height="30"/>
+    </resources>
+</document>
