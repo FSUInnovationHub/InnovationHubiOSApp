@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Foundation
+import MessageUI
 
-class AskForAssistance: UIViewController, UITextFieldDelegate {
+class AskForAssistance: UIViewController, UITextFieldDelegate, MFMailComposeViewControllerDelegate {
     
     let submitAlert = UIAlertController(title: "Done!", message: "Your submission has been recieved, someone will be with you shortly!", preferredStyle: UIAlertControllerStyle.alert)
 
@@ -22,15 +24,19 @@ class AskForAssistance: UIViewController, UITextFieldDelegate {
     
     var categories = ["Design/Hacking Lab", "Makerspace", "Virtual Reality Lab", "3D Printing"]
     
-    //assistant names
-     var hackingLabAssitants = ["First Available","John Doe", "Adam Appleseed", "Steve Jobs", "Tim Cook"]
-    var makerspaceAssitants = ["First Available","John Doe", "Adam Appleseed", "Steve Jobs", "Tim Cook"]
-    var virtualspaceAssitants = ["First Available","John Doe", "Adam Appleseed", "Steve Jobs", "Tim Cook"]
-    var printingAssitants = ["First Available","John Doe", "Adam Appleseed", "Steve Jobs", "Tim Cook"]
+    //Assistant names
+    /*NOTE: this needs to be updated every semester, and pushed as an update to
+            stay up to date. This could be fixed by implementing a firebase basic
+            database and updating that and making sure the application always pulls
+            from that list in order to have the latest update
+     */
+    var hackingLabAssitants = ["First Available","Andres Ibarra", "Benjamin Cynamon", "Ariana Davis"]
+    var makerspaceAssitants = ["First Available","Robby Nowell","Rienne Saludo", "Cody Vabderpool","Maddie Wieshart"]
+    var virtualspaceAssitants = ["First Available","Joshua Barrios", "Rienne Saludo"]
+    var printingAssitants = ["First Available","Robby Nowell","Rienne Saludo", "Cody Vabderpool","Maddie Wieshart"]
     
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var problemDescriptionTextView: UITextView!
-    
     @IBOutlet var submitButton: UIButton!
     
     
@@ -45,6 +51,7 @@ class AskForAssistance: UIViewController, UITextFieldDelegate {
         returnButton.layer.cornerRadius = 15
         
         submitButton.isHidden = true
+        submitButton.layer.cornerRadius = 20
         
         //setting up the pickerView to be able to set the information for the category picker and assitant pickers
         categoryTextBox.delegate = self
@@ -85,32 +92,44 @@ class AskForAssistance: UIViewController, UITextFieldDelegate {
         
     }
     
-    
-    
-    
+    //SEND THE EMAIL AS WELL AS GOING TO UPDATE FIREBASE
     @IBAction func clickedSubmit(_ sender: Any) {
         let areaOfAssist = categoryTextBox.text
         let assistant = assistantTextfield.text
         let email = emailTextField.text
         let description = problemDescriptionTextView.text
         
+        if !MFMailComposeViewController.canSendMail() {
+            print("Mail services are not available")
+            return
+        }
         
-        //do something with this information
-        present(self.submitAlert, animated: true, completion: nil)
-        //self.dismiss(animated: true, completion: nil)
+        let composeVC = MFMailComposeViewController()
+        composeVC.mailComposeDelegate = self
+        
+        // Configure the fields of the interface.
+        composeVC.setToRecipients(["info@innovation.fsu.edu"])
+
+        if areaOfAssist != nil && assistant != nil && description != nil{
+        composeVC.setSubject("Assistance with " + areaOfAssist!  + " with " + assistant!)
+            composeVC.setMessageBody(description!, isHTML: false)
+            self.present(composeVC, animated: true, completion: nil)
+        }
         
         print(areaOfAssist ?? " ",assistant ?? " ",email ?? " ",description ?? " ")
-        
-        
         
     }
     
     
-    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+        self.dismiss(animated: true, completion: nil)
+        
+    }
 
 }
 
-
+//HANDLERS FOR TEXTVIEWS AND PICKERS
 extension AskForAssistance: UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -242,6 +261,7 @@ extension AskForAssistance: UIPickerViewDelegate, UIPickerViewDataSource, UIText
         return false
     }
     
+    //allows for user to simply click enter and it makes the keyboard disappear
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
              problemDescriptionTextView.resignFirstResponder()

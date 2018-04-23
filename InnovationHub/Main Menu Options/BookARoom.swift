@@ -9,6 +9,9 @@
 import UIKit
 import WebKit
 
+var websiteURL = "https://fsu.libcal.com/booking/"
+var bookingRoute = websiteURL
+
 class BookARoom: UIViewController, WKUIDelegate, WKNavigationDelegate{
 
     @IBOutlet var returnButton: UIButton!
@@ -25,14 +28,14 @@ class BookARoom: UIViewController, WKUIDelegate, WKNavigationDelegate{
         super.viewDidLoad()
         
         //setting up the webview and activity indicator
-        lblMessage = UILabel(frame: CGRect(x: 50, y: 0, width: 200, height: 50))
-        vwProgressPopup = UIView(frame: CGRect(x: self.bookingWebView.frame.width/4.5, y: self.bookingWebView.frame.height/4, width: 220, height: 50))
+        lblMessage = UILabel(frame: CGRect(x: 50, y: 0, width: 240, height: 50))
+        vwProgressPopup = UIView(frame: CGRect(x: self.bookingWebView.frame.width/4.5, y: self.bookingWebView.frame.height/4, width: 240, height: 50))
         progressActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.white)
         
         bookingWebView.uiDelegate = self
         bookingWebView.navigationDelegate = self
         
-        let myURL = URL(string: "https://innovation.fsu.edu/")
+        let myURL = URL(string: bookingRoute)
         let myRequest = URLRequest(url: myURL!)
         bookingWebView.load(myRequest)
         showProgress(msg: "Loading Webpage", withIndicator: true, remove: false)
