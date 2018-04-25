@@ -5,6 +5,7 @@ https://innovation.fsu.edu <br/>
 
 Developers: <br/>
 Andres Ibarra - https://github.com/AndibaOfficial <br/>
+Joshua Barrios - https://github.com/joshuabrrs <br />
 
 The offical iOS application for the Innovation Hub at Florida State University.
 
