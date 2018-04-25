@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Bold</string>
-        </array>
         <array key="Oswald-Bold.ttf">
             <string>Oswald-Bold</string>
         </array>
@@ -122,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="-307.38916256157637"/>
+            <point key="canvasLocation" x="884" y="318"/>
         </scene>
         <!--Ask For Assistance-->
         <scene sceneID="a8A-Ei-tW0">
@@ -191,6 +188,9 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCb-r1-7df">
                                 <rect key="frame" x="293" y="59" width="66" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="vO9-GW-bM5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="17"/>
                                 <state key="normal" title="RETURN">
                                     <color key="titleColor" red="0.9728240037" green="1" blue="0.98419289340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -231,7 +231,6 @@
                             <constraint firstItem="qXW-An-nrH" firstAttribute="trailing" secondItem="feJ-np-B6a" secondAttribute="trailing" constant="80" id="T3t-X3-jFT"/>
                             <constraint firstItem="qXW-An-nrH" firstAttribute="trailing" secondItem="yCb-r1-7df" secondAttribute="trailing" constant="16" id="Tic-1b-xU3"/>
                             <constraint firstItem="292-cx-16R" firstAttribute="top" secondItem="4xh-3g-4oq" secondAttribute="bottom" constant="7.3300000000000001" id="Vwc-jj-bpq"/>
-                            <constraint firstItem="yCb-r1-7df" firstAttribute="leading" secondItem="qXW-An-nrH" secondAttribute="leading" constant="293" id="YJB-HS-bGy"/>
                             <constraint firstItem="F2v-Gb-Snm" firstAttribute="trailing" secondItem="qXW-An-nrH" secondAttribute="trailing" id="Yof-0c-fUk"/>
                             <constraint firstItem="qXW-An-nrH" firstAttribute="trailing" secondItem="292-cx-16R" secondAttribute="trailing" constant="16" id="aP5-Il-Kh3"/>
                             <constraint firstItem="bu3-uW-nDW" firstAttribute="leading" secondItem="qXW-An-nrH" secondAttribute="leading" constant="16" id="aiN-oX-b49"/>
@@ -445,7 +444,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT TYPE OF ROOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgN-it-9Ww">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT TYPE OF ROOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XgN-it-9Ww">
                                 <rect key="frame" x="16" y="89" width="343" height="53.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="36"/>
                                 <color key="textColor" red="0.9728240037" green="1" blue="0.98419289340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -471,7 +470,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STUDY ROOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9K-OL-LTa">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STUDY ROOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9K-OL-LTa">
                                                     <rect key="frame" x="78" y="37" width="187" height="53"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="35"/>
                                                     <color key="textColor" red="0.9728240037" green="1" blue="0.98419289340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -495,6 +494,9 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcO-Hk-L65">
                                 <rect key="frame" x="293" y="44" width="66" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="r30-TT-GNW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="17"/>
                                 <state key="normal" title="RETURN">
                                     <color key="titleColor" red="0.9728240037" green="1" blue="0.98419289340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -514,7 +516,6 @@
                             <constraint firstItem="1dQ-6j-lgV" firstAttribute="trailing" secondItem="XgN-it-9Ww" secondAttribute="trailing" constant="16" id="LCn-DB-VUW"/>
                             <constraint firstItem="1dQ-6j-lgV" firstAttribute="trailing" secondItem="rcO-Hk-L65" secondAttribute="trailing" constant="16" id="N4y-JV-1ss"/>
                             <constraint firstItem="gQa-TI-PVe" firstAttribute="top" secondItem="XgN-it-9Ww" secondAttribute="bottom" constant="21" id="Owa-YJ-yTY"/>
-                            <constraint firstItem="rcO-Hk-L65" firstAttribute="leading" secondItem="1dQ-6j-lgV" secondAttribute="leading" constant="293" id="PZt-Ze-Nmz"/>
                             <constraint firstItem="1dQ-6j-lgV" firstAttribute="trailing" secondItem="gQa-TI-PVe" secondAttribute="trailing" constant="16" id="tVv-6X-1gT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1dQ-6j-lgV"/>
@@ -547,6 +548,9 @@
                             </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tik-f7-OhG">
                                 <rect key="frame" x="293" y="44" width="66" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="EhS-Kd-6zd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="17"/>
                                 <state key="normal" title="RETURN">
                                     <color key="titleColor" red="0.9728240037" green="1" blue="0.98419289340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -555,7 +559,7 @@
                                     <segue destination="q3P-A9-mlY" kind="unwind" unwindAction="returnToRoomSelectionWithUnwindSegue:" id="Gcm-A7-a2o"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOOK A ROOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wv0-dV-gpU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOOK A ROOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wv0-dV-gpU">
                                 <rect key="frame" x="16" y="89" width="343" height="67"/>
                                 <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="45"/>
                                 <color key="textColor" red="0.9728240037" green="1" blue="0.98419289340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -567,7 +571,6 @@
                             <constraint firstItem="W2H-Xj-Z76" firstAttribute="leading" secondItem="rmX-pY-8kH" secondAttribute="leading" id="0ul-gA-LNl"/>
                             <constraint firstItem="wv0-dV-gpU" firstAttribute="top" secondItem="Tik-f7-OhG" secondAttribute="bottom" constant="7" id="285-k6-xjv"/>
                             <constraint firstItem="Tik-f7-OhG" firstAttribute="top" secondItem="rmX-pY-8kH" secondAttribute="top" id="8ra-YL-fFd"/>
-                            <constraint firstItem="Tik-f7-OhG" firstAttribute="leading" secondItem="rmX-pY-8kH" secondAttribute="leading" constant="293" id="CaX-Qy-cuO"/>
                             <constraint firstItem="rmX-pY-8kH" firstAttribute="trailing" secondItem="Tik-f7-OhG" secondAttribute="trailing" constant="16" id="R4I-WG-xos"/>
                             <constraint firstItem="wv0-dV-gpU" firstAttribute="leading" secondItem="rmX-pY-8kH" secondAttribute="leading" constant="16" id="RfD-eO-B1A"/>
                             <constraint firstItem="W2H-Xj-Z76" firstAttribute="top" secondItem="wv0-dV-gpU" secondAttribute="bottom" constant="8" id="X6S-40-TN6"/>
@@ -598,7 +601,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCl-CA-40j">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1917"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OUR FOUNDING PARTNERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efL-HU-6p9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OUR FOUNDING PARTNERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efL-HU-6p9">
                                         <rect key="frame" x="8" y="33" width="359" height="67"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="67" id="Bpq-R5-q6q"/>
@@ -629,7 +632,7 @@ Jim Moran School of Entrepreneurship</string>
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OUR ACADEMIC PARTNERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeJ-fb-GIL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OUR ACADEMIC PARTNERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CeJ-fb-GIL">
                                         <rect key="frame" x="8" y="405" width="359" height="67"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="67" id="cNt-rl-ugq"/>
@@ -667,7 +670,7 @@ School Of Information
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OUR SUPPORT PARTNERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dh3-lN-tJo">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OUR SUPPORT PARTNERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dh3-lN-tJo">
                                         <rect key="frame" x="8" y="1074" width="359" height="67"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="67" id="er0-Fj-1yh"/>
@@ -701,7 +704,7 @@ Information Technology Services (ITS) Office of Distant Learning</string>
                                             <constraint firstAttribute="height" constant="317" id="3fS-1i-1am"/>
                                         </constraints>
                                     </mapView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OUR LOCATION:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yB4-Pb-BYA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OUR LOCATION:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yB4-Pb-BYA">
                                         <rect key="frame" x="8" y="1334" width="359" height="67"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="67" id="K9a-3W-L1c"/>
@@ -710,7 +713,7 @@ Information Technology Services (ITS) Office of Distant Learning</string>
                                         <color key="textColor" red="0.9728240037" green="1" blue="0.98419289340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="142 Collegiate Loop Tallahassee, FL 32306-2110" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oL-bO-hYJ">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="142 Collegiate Loop Tallahassee, FL 32306-2110" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3oL-bO-hYJ">
                                         <rect key="frame" x="96" y="1721" width="183" height="94"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="94" id="n1J-qL-He7"/>
